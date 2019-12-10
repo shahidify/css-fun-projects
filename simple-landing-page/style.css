@@ -3,14 +3,14 @@ body {
   font-family: Helvetica;
 }
 
-.zone {
+.special {
   color: #fff;
   font-size: 2em;
   border-radius: 4px;
   transition: all 0.3s linear;
 }
 
-.zone:hover {
+.special:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
@@ -39,18 +39,10 @@ a:hover {
   }
 }
 
-/*
-  this pushes 'contact' all the way to the right.
-  margin-left auto, automatically creates a max left margin to the div
-*/
 .push {
   margin-left: auto;
 }
 
-/*
-  After setting above styles we see that all nav list items are close together.
-  So we want to create a padding between them.
-*/
 li {
   padding: 20px;
 }
@@ -71,28 +63,13 @@ a {
   width: 100%;
 }
 
-/***********************************************************************
-*  Cover
-**********************************************************************/
-/*
-  We use flex since we want to keep things simple (just center content).
-  After setting flex, justify-content centers content horizontal (X axis) within container and align-items centers vertical (Y axis)
-  finally, vh is "view height", and from 0%-100% describes how much of the screen browser to fill out. 
-  As we change height of screen, it'll auto adjust height to 100% of it
-*/
 .container {
-  /* vh = view height. We do this to make sure banner fills entire view */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/*
-We set the image within the cover layout
-rem = relative to font-size of root element. This is since we've created different font size to vary based on screen, 
-so this will automatically change this as well
-*/
 .cover {
   width: 100%;
   height: 100%;
@@ -113,17 +90,19 @@ so this will automatically change this as well
 }
 
 .grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 10px;
+  width: 100%;
 }
 
 .card {
+  margin: 10px;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
   background-color: #444;
-  margin: 50px;
 }
 
 .card > img {
+  padding-top: 10px;
   max-width: 100%;
   height: auto;
 }
@@ -138,6 +117,7 @@ so this will automatically change this as well
 
 .card > .text {
   padding: 0 20px 20px;
+  text-align: center;
 }
 
 button {
@@ -165,5 +145,5 @@ footer p {
 }
 
 .blueback {
-  background: #2d3537;
+  background: #2071ade6;
 }
